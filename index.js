@@ -21,7 +21,7 @@ app.get("/users", async (req, res) => {
     const users = await userModel.find();
     return res
       .status(200)
-      .send({ message: "Users fetched", success: false, users });
+      .send({ message: "Users fetched", success: true, users });
   } catch (error) {
     console.log("error in fetching users");
     return res
